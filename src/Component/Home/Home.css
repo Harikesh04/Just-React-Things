@@ -1,0 +1,83 @@
+.homeheading{
+  
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 1.4vmax;
+    border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+    width: 20vmax;
+    padding: 1vmax;
+    margin: 5vmax auto;
+
+}
+.newscard{
+    width: 18vmax;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    margin:2vmax;
+    transition: all 0.5s;
+    padding-bottom: 0.5vmax;
+    overflow: hidden;
+   
+
+}
+.newscard:hover{
+    box-shadow: 0 0 5px rgba(26, 25, 25, 0.521);
+    transform: translateY(-1.4vmax);
+}
+.newscontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2vmax auto;
+    width: 80vw;
+    justify-content: center;
+    max-width: 100%;
+}
+.newscard>img{
+    width: 100%;
+    cursor: pointer;
+
+}
+.newscard>h2{
+    font-family: "Roboto";
+    font-size: 1.5vmax;
+   
+    color: tomato;
+
+}
+
+.propertybox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.propertybox>p:first-child{
+    font-family: "Roboto";
+    font-size: 1.2vmax;
+    margin: 1vmax 0.5vmax;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: black;
+    margin: 1vmax 0;
+}
+.propertybox> p:nth-of-type(2){
+    font-family: "Roboto";
+   
+   font-size: 1vmax;
+   font-weight: 300;
+    color: rgb(116, 111, 111);
+   
+}
+.NewsItembtn{
+    text-decoration: none;
+    background-color: tomato;
+    padding: 0.5vmax;
+    color: white;
+   margin-top: 2vmax;
+   margin-left: 9vmax;
+   cursor: pointer;
+}
