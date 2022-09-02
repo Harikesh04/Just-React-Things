@@ -9,25 +9,25 @@ const Header = () => {
             <h2>NewsJet</h2>
         </div>
         <div className="midheader">
-        <NavLink className="navlinks" to="/" activeClassName="active-link" >
+        <NavLink className="navlinks" to="/" activeclassname="active-link" >
          Home
         </NavLink>
-        <NavLink className="navlinks" to="/technews"activeClassName="active-link" >
+        <NavLink className="navlinks" to="/technews"activeclassname="active-link" >
          Technology
         </NavLink>
-        <NavLink className="navlinks" to="/healthnews" activeClassName="active-link">
+        <NavLink className="navlinks" to="/healthnews" aactiveclassname="active-link">
          Health
         </NavLink>
-        <NavLink className="navlinks" to="/businessnews" activeClassName="active-link">
+        <NavLink className="navlinks" to="/businessnews" activeclassname="active-link">
          Business
         </NavLink>
-        <NavLink className="navlinks" to="/Entertainment"activeClassName="active-link" >
+        <NavLink className="navlinks" to="/Entertainment"activeclassname="active-link" >
          Entertainment
         </NavLink>
-        <NavLink className="navlinks" to="/Sports" activeClassName="active-link">
+        <NavLink className="navlinks" to="/Sports" activeclassname="active-link">
         Sports
         </NavLink>
-        <NavLink className="navlinks" to="/Science"activeClassName="active-link" >
+        <NavLink className="navlinks" to="/Science"activeclassname="active-link" >
          Science
         </NavLink>
         </div>

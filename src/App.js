@@ -7,6 +7,7 @@ import Home from "./Component/Home/Home.js"
 function App() {
   const pageSize = 5;
   const apiKey = "871695a7cc874a99b4c5e75a14336fe2";
+  // const apiKey = process.env.REACT_APP_APIKEY;
   const [progress, setProgress] = useState(0)
   return (
     <Router>
