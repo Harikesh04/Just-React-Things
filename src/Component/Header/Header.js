@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 import "./Header.css"
 
 const Header = () => {
@@ -9,27 +9,27 @@ const Header = () => {
             <h2>NewsJet</h2>
         </div>
         <div className="midheader">
-        <Link className="navlinks" to="/" >
+        <NavLink className="navlinks" to="/" activeClassName="active-link" >
          Home
-        </Link>
-        <Link className="navlinks" to="/technews" >
+        </NavLink>
+        <NavLink className="navlinks" to="/technews"activeClassName="active-link" >
          Technology
-        </Link>
-        <Link className="navlinks" to="/healthnews" >
+        </NavLink>
+        <NavLink className="navlinks" to="/healthnews" activeClassName="active-link">
          Health
-        </Link>
-        <Link className="navlinks" to="/businessnews" >
+        </NavLink>
+        <NavLink className="navlinks" to="/businessnews" activeClassName="active-link">
          Business
-        </Link>
-        <Link className="navlinks" to="/Entertainment" >
+        </NavLink>
+        <NavLink className="navlinks" to="/Entertainment"activeClassName="active-link" >
          Entertainment
-        </Link>
-        <Link className="navlinks" to="/Sports" >
+        </NavLink>
+        <NavLink className="navlinks" to="/Sports" activeClassName="active-link">
         Sports
-        </Link>
-        <Link className="navlinks" to="/Science" >
+        </NavLink>
+        <NavLink className="navlinks" to="/Science"activeClassName="active-link" >
          Science
-        </Link>
+        </NavLink>
         </div>
     </div>
   )

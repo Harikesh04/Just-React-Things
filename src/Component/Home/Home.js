@@ -9,7 +9,8 @@ const Home = (props) => {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
-  const [query, setQuery] = useState("")
+  
+  const [query, setQuery] = useState("");
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -17,7 +18,7 @@ const Home = (props) => {
 
   const updateNews = async () => {
     props.setProgress(10);
-    const url = `https://newsapi.org/v2/top-headlines?&country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?q=${query}&country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
     setLoading(true);
     let data = await fetch(url);
     props.setProgress(30);
@@ -31,11 +32,12 @@ const Home = (props) => {
 
   useEffect(() => {
     updateNews();
+
     // eslint-disable-next-line
   }, []);
 
   const fetchMoreData = async () => {
-    const url = `https://newsapi.org/v2/top-headlines?country=${
+    const url = `https://newsapi.org/v2/top-headlines?q=${query}&country=${
       props.country
     }&category=${props.category}&apiKey=${props.apiKey}&page=${
       page + 1
@@ -46,23 +48,56 @@ const Home = (props) => {
     setArticles(articles.concat(parsedData.articles));
     setTotalResults(parsedData.totalResults);
   };
+  // let dataSearch = articles
+  //   .filter((item) => {
+  //     return Object.keys(item).some((key) =>
+  //       item[key]
+  //         .toString()
+  //         .toLowerCase()
+  //         .includes(sfilter.toString().toLowerCase())
+  //     );
+  //   })
+  const handleChange = (e) => {
+    e.preventDefault();
+    setQuery(e.target.value);
+    
+    // fetchMoreData();
+     updateNews();
+  };
 
   return (
     <>
-      
-        <h1 className="homeheading">Top {capitalizeFirstLetter(props.category)} Headlines </h1>
-     
-      <InfiniteScroll
-        dataLength={articles.length}
-        next={fetchMoreData}
-        hasMore={articles.length !== totalResults}
-      >
-        <div className="newscontainer" id="container">
-          {articles.map((x) => (
-            <NewsItem props={x} />
-          ))}
+      <div className="homepage">
+        <h1 className="homeheading">
+          Top {capitalizeFirstLetter(props.category)} Headlines{" "}
+        </h1>
+
+        <div className="searchbox">
+          
+          <input
+            type="text"
+            placeholder="Search with Search Bar"
+            className="searchbox1"
+            value={query}
+            onChange={handleChange}
+            
+           
+          ></input>
+          
         </div>
-      </InfiniteScroll>
+
+        <InfiniteScroll
+          dataLength={articles.length}
+          next={fetchMoreData}
+          hasMore={articles.length !== totalResults}
+        >
+          <div className="newscontainer" id="container">
+            {articles.map((x) => (
+              <NewsItem props={x}  />
+            ))}
+          </div>
+        </InfiniteScroll>
+      </div>
     </>
   );
 };
