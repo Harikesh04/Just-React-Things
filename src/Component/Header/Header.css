@@ -44,4 +44,30 @@
 .navlinks:hover{
     color:rgb(222, 42, 19);
 }
-   
+
+@media screen and (max-width:600px) {
+    .headercontainer{
+       
+        grid-template-columns:1fr;
+     
+         position:relative;
+        
+       
+    }
+    .headerlogo>h2{
+        
+        font-size: 4vmax;
+        
+    }
+    .headerlogo>h2:hover{
+        
+        font-size: 5vmax;
+    
+    }
+    .navlinks{
+
+        font-size: 2vmax;
+
+    }
+    
+}

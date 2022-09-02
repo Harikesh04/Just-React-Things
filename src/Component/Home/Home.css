@@ -81,6 +81,7 @@
    margin-top: 2vmax;
    margin-left: 9vmax;
    cursor: pointer;
+   font-family: "Roboto";
 }
 .searchbox{
     display: flex;
@@ -98,4 +99,40 @@
     border-color: #9cdbdb;
     cursor: pointer;
 
+  }
+
+  @media screen and (max-width:600px) {
+   
+    .homeheading{
+  
+        
+        font-size: 2vmax;
+       
+    
+    }
+    .newscard>h2{
+       
+        font-size: 2vmax;
+       
+    
+    }
+    .propertybox>p:first-child{
+       
+        font-size: 1.7vmax;
+      
+    }
+    .propertybox> p:nth-of-type(2){
+       
+       
+       font-size: 1.7vmax;
+      
+       
+    }
+    .NewsItembtn{
+        font-size: 1.7vmax;
+        padding: 0.5vmax;
+        font-family: "Roboto";
+       
+     
+    }
   }
