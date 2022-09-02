@@ -1,3 +1,22 @@
+### NewsJet
+if any issue comes in this please change the api key because its limit got exceeds.
+###RESPONSIVE
+![Screenshot (1504)](https://user-images.githubusercontent.com/91447902/188142653-30d69681-d835-4024-b7bb-8df658ce8285.png)
+![Screenshot (1505)](https://user-images.githubusercontent.com/91447902/188142734-96132d4c-f892-431a-ad91-06116bbdbcc4.png)
+
+
+![Screenshot (1495)](https://user-images.githubusercontent.com/91447902/188137843-8d35f17b-07c2-450c-b514-6c133af7553d.png)
+![Screenshot (1496)](https://user-images.githubusercontent.com/91447902/188137891-c4be4daf-1a29-4c71-b4a4-3e02640b35b3.png)
+![Screenshot (1497)](https://user-images.githubusercontent.com/91447902/188137922-1f7c128f-1ac6-4ec8-8874-6939640a236c.png)
+![Screenshot (1498)](https://user-images.githubusercontent.com/91447902/188137935-54399f34-8850-46c3-946e-9bee33a100b7.png)
+![Screenshot (1499)](https://user-images.githubusercontent.com/91447902/188137958-b506f77b-79c0-4d13-9ae7-2f98057465c8.png)
+![Screenshot (1500)](https://user-images.githubusercontent.com/91447902/188137965-5ff59067-c98d-4d9f-b156-226e3b86449e.png)
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
