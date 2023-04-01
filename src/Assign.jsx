@@ -18,9 +18,29 @@ const Assign = () => {
         console.log(JSON.stringify(data));
 
     }
+
+    const arr = ["first name", "last name", "email"];
+    const [array,setArray]=useState([false,false,false]);
+  
+
+    const handleClick=(ind)=>{
+       
+        const newArray =[...array];
+        newArray[ind]=!array[ind];
+        setArray(newArray);
+        // console.log(newArray);
+        console.log(array);
+       
+        
+
+
+
+    }
+
+
     return (
         <>
-            <div className="continaer">
+            {/* <div className="continaer">
                 <form  onSubmit={handleSubmit}>
                     <div>
                         <p>First Name</p>
@@ -74,6 +94,22 @@ const Assign = () => {
 
 
                 </form>
+            </div> */}
+
+            <div className="container">
+                {arr.map((ele,i)=>{
+                    return(
+                        <div className='container' key={i}>
+                       
+                        <input type='checkbox' onClick={()=>handleClick(i)}/>
+                        <p>{ele}</p>
+                        {(array[i]?"": <button>Delete</button>)}
+                       
+                        
+                        </div>
+                    )
+                })}
+                
             </div>
 
 
