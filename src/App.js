@@ -6,6 +6,7 @@ import UseCallbackLearn from "./UseCallback.js";
 import UseMemo from "./UseMemoLearn";
 import Formik from "./Formik.jsx";
 import Assign from "./Assign.jsx";
+import UseLayout from "./UseLayout.js";
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <UseMemo/> */}
       {/* <UseCallbackLearn/> */}
       {/* <Formik/> */}
-      <Assign/>
+      {/* <Assign/> */}
+      <UseLayout/>
     </>
   );
 }
