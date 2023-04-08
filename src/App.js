@@ -3,7 +3,7 @@ import React from "react";
 import Hooks from "./Hooks.js";
 import LifeCycle from "./LifeCycle.js"
 import UseCallbackLearn from "./UseCallback.js";
-import UseMemo from "./UseMemoLearn";
+import UseMemoLearn from "./UseMemoLearn.js";
 import Formik from "./Formik.jsx";
 import Assign from "./Assign.jsx";
 import UseLayout from "./UseLayout.js";
@@ -18,7 +18,8 @@ function App() {
       {/* <UseCallbackLearn/> */}
       {/* <Formik/> */}
       {/* <Assign/> */}
-      <UseLayout/>
+      {/* <UseLayout/> */}
+      <UseMemoLearn/>
     </>
   );
 }

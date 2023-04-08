@@ -1,40 +1,47 @@
-import React ,{useMemo,useState,memo} from "react";
+import React, { useMemo, useState, memo } from "react";
+
+
 
 const UseMemoLearn = () => {
- const [val, setVal] = useState(0)
- const [counterTwo, setCounterTwo] = useState(0)
+  const [dark, setDark] = useState(false);
+  const [num, setNum] = useState(0);
 
- 
- const checkEven = ()=>{
-     console.log("checking");
-     return val%2===0;
-    } // ** so it un nessarly running when we not not working on counter 1 then also.
+  const themeStyle = {
+    backgroundColor: dark ? "black" : "white",
+    color: dark ? "white" : "black",
+  };
 
-    
-    
-    const isEven =useMemo(() => checkEven(), [val]);
- //** to optimise this use Memo comes inside the picture */
+  function slowFunction(num) {
+    for (let i = 0; i < 1000000000; i++) {}
 
-//  The React useMemo Hook returns a memoized value.
+    return num * 2;
+  }
 
-// Think of memoization as caching a value so that it does not need to be recalculated.
+  // const doubleNumber=  slowFunction(num); // ? when ever any state changes component will rerender and will unneccesarily call this slow function and our application will slow down therefore we will use use memo
 
-// The useMemo Hook only runs when one of its dependencies update.
+  // ! use Memo return a memoized value and take a parameter will run the func only when the val in dependency arr will change
 
-// This can improve performance. 
+  // * why don't we always use useMemo ?
 
+  // ? if we will always wrap every state in useMemo it will take unnecassery space and will be problematic for our application
 
+  const doubleNumber = useMemo(() => {
+    return slowFunction(num);
+  }, [num]);
 
   return (
     <>
-      <div>UseMemo</div>
-      <button onClick={()=>setVal(val+1)}>Counter1{  val}</button>
-      <p>{(isEven?"even":"odd")}</p>
-      
-      <button onClick={()=>setCounterTwo(counterTwo+1)}>Counter2 {  counterTwo}</button>
-      
+      <input
+        type="number"
+        onChange={(e) => setNum(parseInt(e.target.value))}
+        placeholder={num}
+      />
+
+      <button onClick={() => setDark(!dark)}>Change Theme</button>
+
+      <div style={themeStyle}>{doubleNumber}</div>
     </>
   );
 };
 
-export default memo(UseMemoLearn);
+export default UseMemoLearn;
