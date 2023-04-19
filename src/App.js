@@ -8,6 +8,7 @@ import Formik from "./Formik.jsx";
 import Assign from "./Assign.jsx";
 import UseLayout from "./UseLayout.js";
 
+import Concepts from "./Concepts.js";
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
       {/* <Formik/> */}
       {/* <Assign/> */}
       {/* <UseLayout/> */}
-      <UseMemoLearn/>
+      {/* <UseMemoLearn/> */}
+      <Concepts/>
+      
     </>
   );
 }
