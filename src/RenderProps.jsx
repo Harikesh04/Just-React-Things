@@ -51,4 +51,26 @@ export default RenderProps
 // 6. prevent code redundancy
 
 
+// ! what is difference between react 17 vs 18
+// *1. Automatic Batching: concept of batching was introduced in React v 18 in which multiple state of react will update in single rerender , in previous version it takes n no. of rerender to update n state of react.
+
+// * 2.useTransition Hook => with the help of useTransition hook we can point out low priority state{ disadvantage: it increases unnecessary rendering in application}
+
+// * 3. suspence =>  while server side rendering when data is not loaded in client side then a default loader/data can be shown with the help of suspence which inhances user experience.
+
+// what is transition and what is difference between transition and debouncing and setTimeout
+
+
+// ! differecen between reactjs and angular
+
+// React => easy to learn , have freedom , follow virtual dom , one way data binding , fast
+// Angular => a full fleged framework , complex, two way data binding , follow real dom manipulation , slow
+
+
+
+
+
+
+
+
 

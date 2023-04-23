@@ -1,4 +1,4 @@
-import React, { useMemo, useState, memo } from "react";
+import React, { useMemo, useState, memo, useCallback } from "react";
 
 
 
@@ -45,3 +45,18 @@ const UseMemoLearn = () => {
 };
 
 export default UseMemoLearn;
+
+
+// ! what is difference between useMemo and useCallback
+
+// ? useMemo memoized a value where as useCallback memoized a function.
+
+
+// fucntion Component(){
+//   const func = function(){return value;}
+
+//   const memoizedCallback = useMemo(()=>func(),[]);// here we are memoizing the value
+//   const memoizedCallback = useCallback(()=>func,[]);// here we are memoizing the function
+
+
+// }
