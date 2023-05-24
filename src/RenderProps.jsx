@@ -1,7 +1,7 @@
 import React from 'react'
 
 const RenderProps = () => {
-  
+
   return (
     <div>RenderProps</div>
   )
@@ -24,7 +24,7 @@ export default RenderProps
 // ! suppose in button click 4 state has to be change how will react process on this?
 
 
-// ? there is a update in batch,  react will update all the state in just one render.
+// ? there is a update in react 18 i.e automatic batching,  react will update all the state in just one render.
 
 // !reconciliation algorithm
 
@@ -66,6 +66,24 @@ export default RenderProps
 // React => easy to learn , have freedom , follow virtual dom , one way data binding , fast
 // Angular => a full fleged framework , complex, two way data binding , follow real dom manipulation , slow
 
+
+// ! babel : babel is a transpiler it converts jsx code into machine understandable  code.
+
+
+// Qustions on redux.
+
+// ! Redux thunk 
+// redux thunk is a middleware i.e use to manage the state asynhcrously, here we use promises
+
+// ! Redux saga
+
+// redux saga is a middleware i.e use of manage the state asynchronously, here the developer use generators.
+
+
+
+// ! what is error boundary in react js
+
+// error boundary is use to mangage errors in react app , there is a package called error-boundary with the help of that we can easily handles the error
 
 
 
